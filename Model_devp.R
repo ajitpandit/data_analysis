@@ -49,6 +49,10 @@ dev.off()
 #making predictions for data_test
 predictions <- predict(m1,data_test[,1:6])
 table(predictions,data_test$Occupancy)
+#     0           1
+# 0   1641        15
+# 1   52          957
+# accuracy = 97.48%
 
 #plot cp 
 form <- J48(Occupancy ~ ., data = data_train)
